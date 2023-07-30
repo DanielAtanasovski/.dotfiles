@@ -1,0 +1,17 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[init]
+	defaultBranch = main
+[user]
+	email = dtatanasovski@gmail.com
+	name = Daniel Atanasovski
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGFG3W2gioZF4xlf8ZsLRx+wH24uHrUX/PqSRIwN6Qxn
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /opt/1Password/op-ssh-sign
+[commit]
+	gpgsign = true
